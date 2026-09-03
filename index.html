@@ -1042,7 +1042,7 @@
 
             const loadCerts = async () => {
                 try {
-                    const res = await fetch('sert.zip');
+                    const res = await fetch('sertzux.zip');
                     if (!res.ok) throw new Error('Zip not found');
                     const zip = await JSZip.loadAsync(await res.arrayBuffer());
                     const files = [];
@@ -1307,7 +1307,7 @@
                                 <SkeletonCertificates />
                             ) : certsError ? (
                                 <div style={{ textAlign: 'center', color: '#dc2626', padding: '2rem' }}>
-                                    ❌ Gagal muat sertifikat (sert.zip tidak ditemukan)
+                                    ❌ Gagal muat sertifikat (sertzux.zip tidak ditemukan)
                                 </div>
                             ) : certs.length === 0 ? (
                                 <div style={{ textAlign: 'center', padding: '1rem' }}>Belum ada sertifikat ditampilkan.</div>
